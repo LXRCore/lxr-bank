@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- LXR-BANK | LXR UI Kit | © 2026 iBoss21 / LXRCore | lxrcore.com -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Teller</title>
+  <link rel="stylesheet" href="lxr-ui.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="lxr">
+  <div id="app" class="lxr-hidden">
+    <header class="bk-top lxr-hit">
+      <div class="bk-brand">
+        <img class="bk-logo" src="img/lxrcore-logo.png" alt="">
+        <div><span class="lxr-mono lxr-t-ash" data-l="bank"></span><h1 class="lxr-cut bk-title" id="branch-label"></h1></div>
+        <span class="lxr-mono bk-closed lxr-hidden" id="closed" data-l="closed"></span>
+      </div>
+      <div class="bk-hints lxr-mono lxr-t-smoke"><span class="lxr-key">Backspace</span><span data-l="hint_close"></span></div>
+    </header>
+
+    <nav class="bk-tabs lxr-hit" id="tabs"></nav>
+    <section class="bk-main lxr-hit" id="main"></section>
+
+    <aside class="bk-side lxr-hit">
+      <div class="bk-side__head lxr-rule-b"><span class="lxr-mono lxr-t-ash" data-l="holder"></span></div>
+      <div class="bk-holder"><div class="bk-holder__name lxr-cut" id="holder"></div><div class="lxr-mono lxr-t-smoke"><span data-l="account_no"></span> <span id="number"></span></div></div>
+      <div class="bk-side__head lxr-rule-b"><span class="lxr-mono lxr-t-ash" data-l="books"></span></div>
+      <div class="bk-books" id="books"></div>
+      <div class="bk-side__foot"><div class="bk-sum lxr-mono lxr-t-smoke"><span data-l="cash"></span><span class="lxr-grow"></span>$<span id="cash">0.00</span></div><div class="bk-sum lxr-mono lxr-t-smoke"><span data-l="notes"></span><span class="lxr-grow"></span><span id="notes">0</span></div></div>
+    </aside>
+
+    <footer class="bk-foot lxr-hit"><span class="lxr-grow"></span><button class="lxr-btn lxr-btn-ghost" id="btn-close" data-l="close"></button></footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
