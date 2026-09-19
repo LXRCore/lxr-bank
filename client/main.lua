@@ -59,6 +59,10 @@ local function spawnTeller(branch)
     tellers[branch.id] = ped
     exports['lxr-interact']:AddEntity('lxr-bank:' .. branch.id, ped, { label = branch.label, distance = Config.Security.promptDistance, options = {
         { label = Lang:t('ui.teller'), key = 'J', onSelect = function() open(branch) end },
+        { label = Lang:t('ui.box', { fee = ('%.2f'):format(Config.DepositBox.fee or 0) }), key = 'E', canInteract = function() return Config.DepositBox.enabled end, onSelect = function()
+            local ok, err, extra = LXR.RPC.Server('lxr-bank:box', branch.id)
+            if not ok then toast('error.' .. tostring(err), 'error', { amount = ('%.2f'):format(extra or 0) }) end
+        end },
     }})
 end
 local function removeTeller(branch)

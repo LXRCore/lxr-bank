@@ -1,6 +1,7 @@
 # Changelog
 
 ## 3.0.0 — 2026-09-19
+* The safe deposit box: a box per character at every branch (an lxr-inventory stash, yours alone), a small fee each visit (`Config.DepositBox`).
 * LXRCore v3 release line: every resource ships as 3.0.0 from here (the entries below are the road to it).
 
 ## 3.0.0 — 2026-09-18

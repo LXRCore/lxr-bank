@@ -250,6 +250,20 @@ LXR.RPC.Register('lxr-bank:notes', function(src, branchId, n)
 end)
 
 -- societies
+-- the safe deposit box: yours alone, at this branch, for a small fee each visit
+LXR.RPC.Register('lxr-bank:box', function(src, branchId)
+    local P, branch = gate(src, branchId)
+    if not P then return false, branch end
+    if not Config.DepositBox.enabled or GetResourceState('lxr-inventory') ~= 'started' then return false, 'invalid' end
+    local fee = tonumber(Config.DepositBox.fee) or 0
+    if fee > 0 and not P.Functions.RemoveMoney(Config.Trade.cash, fee, 'bank:box ' .. branch.id) then return false, 'no_cash', fee end
+    exports['lxr-inventory']:OpenInventory(src, 'stash', ('bank-box-%s-%s'):format(branch.id, P.PlayerData.citizenid), {
+        label = Lang:t('ui.box_label', { branch = branch.label }), owner = P.PlayerData.citizenid, slots = Config.DepositBox.slots, weight = Config.DepositBox.weight,
+        coords = branch.coords, distance = Config.Security.maxDistance })
+    LXRCore.Emit('lxr:bank:box', nil, src, branch.id)
+    return true
+end)
+
 LXR.RPC.Register('lxr-bank:society', function(src, branchId, book, amount)
     local P, branch = gate(src, branchId)
     if not P then return false, branch end

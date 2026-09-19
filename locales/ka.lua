@@ -6,6 +6,7 @@
 
 Locale.Register('ka', {
     error = {
+        no_cash = 'გჭირდება $%{amount} ნაღდი.',
         rate = 'შენელდი.', invalid = 'მოთხოვნა არასწორია.', too_far = 'მოლარეს მიუახლოვდი.', closed = 'ბანკი დაკეტილია.', amount = 'სწორი თანხა შეიყვანე.',
         no_cash = 'ამდენი თან არ გაქვს. საჭიროა: $%{amount}.', no_funds = 'ანგარიშზე ამდენი არ არის. საჭიროა: $%{amount}.', no_account = 'ასეთი ნომრით ანგარიში არ არსებობს.',
         self = 'საკუთარ თავზე გადარიცხვა არ შეიძლება.', too_heavy = 'ჩანთა სავსეა.', wrong_bank = 'ეს ჩეკი გაცემულია — %{label}.', no_notes = 'ამდენი ბანკნოტი არ გაქვს.',
@@ -15,6 +16,7 @@ Locale.Register('ka', {
         deposited = 'შეტანილია $%{amount}.', withdrawn = 'გამოტანილია $%{amount}.', drafted = 'გადარიცხულია $%{amount} ანგარიშზე %{number}.', cheque = 'გამოწერილია ჩეკი $%{amount}.', cashed = 'განაღდებულია $%{amount}.',
     },
     ui = {
+        box = 'სეიფის უჯრა ($%{fee})', box_label = 'სეიფის უჯრა — %{branch}',
         bank = 'ბანკი', teller = 'მოლარესთან საუბარი', closed = 'დაკეტილია', hint_close = 'წასვლა', close = 'წასვლა', holder = 'ანგარიშის მფლობელი', account_no = 'ანგარიშის №', books = 'შენი ანგარიშები', cash = 'ნაღდი ფული', notes = 'ბანკნოტები',
         tab_book = 'ანგარიში', tab_draft = 'გადარიცხვები', tab_paper = 'ჩეკები და ბანკნოტები', tab_society = 'საზოგადოება',
         balance = 'ბალანსი', available = 'ხელმისაწვდომი', local_book = 'ინახება ამ ფილიალში.', by_wire = 'ინახება სხვაგან — ტელეგრაფით, %{pct}% საკომისიო.', by_wire_short = 'ტელეგრაფით', here = 'ეს ფილიალი',

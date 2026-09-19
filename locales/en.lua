@@ -6,6 +6,7 @@
 
 Locale.Register('en', {
     error = {
+        no_cash = 'You need $%{amount} in cash.',
         rate = 'Slow down.', invalid = 'That request is not valid.', too_far = 'Step up to the teller.', closed = 'The bank is closed.', amount = 'Enter a proper amount.',
         no_cash = 'You do not carry that much. Needed: $%{amount}.', no_funds = 'The book does not hold that much. Needed: $%{amount}.', no_account = 'No account by that number.',
         self = 'You cannot draft money to yourself.', too_heavy = 'Your satchel is full.', wrong_bank = 'That cheque is drawn on %{label}.', no_notes = 'You do not carry that many notes.',
@@ -15,6 +16,7 @@ Locale.Register('en', {
         deposited = 'Deposited $%{amount}.', withdrawn = 'Withdrew $%{amount}.', drafted = 'Drafted $%{amount} to account %{number}.', cheque = 'Cheque for $%{amount} written.', cashed = 'Cashed for $%{amount}.',
     },
     ui = {
+        box = 'Safe deposit box ($%{fee})', box_label = 'Deposit box — %{branch}',
         bank = 'Bank', teller = 'Talk to the teller', closed = 'Closed', hint_close = 'leave', close = 'Leave', holder = 'Account holder', account_no = 'Account no.', books = 'Your books', cash = 'Cash on you', notes = 'Bank notes',
         tab_book = 'The book', tab_draft = 'Drafts', tab_paper = 'Cheques & notes', tab_society = 'Society',
         balance = 'balance', available = 'available', local_book = 'Kept at this branch.', by_wire = 'Kept elsewhere — reached by telegraph wire, %{pct}% fee.', by_wire_short = 'by wire', here = 'this branch',

@@ -30,6 +30,7 @@ their books here, and the core's payroll draws on them.
   in the core registry (seeded from `startBalance`) and every gang. Access
   needs the grade permission `society` or a gang boss grade. The core's
   paycheck calls `GetAccountBalance` / `RemoveMoney` here.
+* **Safe deposit box** — a box per character at every branch, a fee each visit; an lxr-inventory stash only its owner opens. `Config.DepositBox`.
 * **Tellers** — local peds at every counter, targets through lxr-interact;
   blips per branch; optional opening hours.
 * **Themes** — LXR Night / LXR Morning from the core.

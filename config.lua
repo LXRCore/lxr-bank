@@ -65,6 +65,9 @@ Config.Trade = {
     ledgerRows = 20,             -- recent movements shown per account
 }
 
+-- the safe deposit box: a box per character at every branch (an lxr-inventory stash), a fee each time it is opened
+Config.DepositBox = { enabled = true, slots = 10, weight = 40000, fee = 0.50, weapons = true }
+
 -- ████████████████████████████████████████████████████████████████████████████████
 -- ████████████████████████ SOCIETIES ═════════════════════════════════════════════
 -- ████████████████████████████████████████████████████████████████████████████████
